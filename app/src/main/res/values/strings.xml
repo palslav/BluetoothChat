@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">BluetoothChat</string>
+    <string name="btOFF">BlueTooth OFF</string>
+    <string name="btON">BlueTooth ON</string>
 </resources>

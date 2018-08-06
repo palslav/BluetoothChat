@@ -2,4 +2,7 @@
     <string name="app_name">BluetoothChat</string>
     <string name="btOFF">BlueTooth OFF</string>
     <string name="btON">BlueTooth ON</string>
+    <string name="show_paired_devices">Show Paired Devices</string>
+    <string name="show_all_devices">Show All Devices</string>
+    <string name="paired_devices">Paired Devices</string>
 </resources>

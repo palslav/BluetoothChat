@@ -14,7 +14,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="13dp"
         android:text="@string/btON" />
 
     <Button
@@ -25,5 +25,28 @@
         android:layout_alignTop="@+id/btON"
         android:layout_marginEnd="56dp"
         android:text="@string/btOFF" />
+
+    <Button
+        android:id="@+id/btShowAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btOFF"
+        android:layout_below="@+id/btON"
+        android:text="@string/show_all_devices" />
+
+    <Button
+        android:id="@+id/btToPaired"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/btON"
+        android:layout_below="@id/btON"
+        android:text="@string/paired_devices" />
+
+    <ListView
+        android:id="@+id/allDevicesListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/btShowAll" />
 
 </RelativeLayout>

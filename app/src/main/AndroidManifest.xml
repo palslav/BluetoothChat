@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".PairedDevices">
         </activity>
+        <activity android:name=".ShowAllDevices">
+        </activity>
 
     </application>
 

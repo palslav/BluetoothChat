@@ -39,25 +39,25 @@ public class PairedDevices extends AppCompatActivity{
         buttonShowPaired.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (myBluetoothAdapter != null) {
-                    if (myBluetoothAdapter.isEnabled()) {
+            if (myBluetoothAdapter != null) {
+                if (myBluetoothAdapter.isEnabled()) {
 
-                        Set<BluetoothDevice> bluetoothDevices = myBluetoothAdapter.getBondedDevices();
-                        String[] bondedDevices = new String[bluetoothDevices.size()];
-                        int index = 0;
+                    Set<BluetoothDevice> bluetoothDevices = myBluetoothAdapter.getBondedDevices();
+                    String[] bondedDevices = new String[bluetoothDevices.size()];
+                    int index = 0;
 
-                        if (bluetoothDevices.size() > 0) {
-                            for (BluetoothDevice device : bluetoothDevices) {
-                                bondedDevices[index++] = device.getName();
-                            }
+                    if (bluetoothDevices.size() > 0) {
+                        for (BluetoothDevice device : bluetoothDevices) {
+                            bondedDevices[index++] = device.getName();
                         }
-
-                        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, bondedDevices);
-                        pairedListView.setAdapter(arrayAdapter);
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Enable Bluetooth", Toast.LENGTH_LONG).show();
                     }
+
+                    ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, bondedDevices);
+                    pairedListView.setAdapter(arrayAdapter);
+                } else {
+                    Toast.makeText(getApplicationContext(), "Enable Bluetooth", Toast.LENGTH_LONG).show();
                 }
+            }
             }
         });
     }

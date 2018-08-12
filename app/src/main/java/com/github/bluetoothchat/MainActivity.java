@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button buttonON, buttonOFF, buttonToPaired, buttonToShowAll, buttonMakeDiscoverable;
+    Button buttonON, buttonOFF, buttonToPaired, buttonToShowAll, buttonMakeDiscoverable, buttonToScanMode;
     BluetoothAdapter myBluetoothAdapter;
     Intent btEnableIntent;
     int requestCodeForEnable;
@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         buttonToPaired = (Button) findViewById(R.id.btToPaired);
         buttonToShowAll = (Button) findViewById(R.id.btToShowAll);
         buttonMakeDiscoverable = (Button) findViewById(R.id.btMakeDiscoverable);
+        buttonToScanMode = (Button) findViewById(R.id.btToScanMode);
 
         myBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         btEnableIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
@@ -36,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         bluetoothToShowAllMethod();
         bluetoothToPairedMethod();
         bluetoothMakeDiscoverable();
+        bluetoothToScanMode();
+    }
+
+    private void bluetoothToScanMode() {
+        buttonToScanMode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ScanMode.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void bluetoothMakeDiscoverable() {

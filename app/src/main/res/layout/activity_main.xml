@@ -48,4 +48,12 @@
         android:layout_centerHorizontal="true"
         android:text="@string/make_discoverable" />
 
+    <Button
+        android:id="@+id/btToScanMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btMakeDiscoverable"
+        android:layout_centerHorizontal="true"
+        android:text="@string/to_scan_mode" />
+
 </RelativeLayout>

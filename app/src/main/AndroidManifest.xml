@@ -23,6 +23,8 @@
         </activity>
         <activity android:name=".ShowAllDevices">
         </activity>
+        <activity android:name=".ScanMode">
+        </activity>
 
     </application>
 

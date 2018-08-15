@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/btToShowAll"
         android:layout_centerHorizontal="true"
-        android:text="@string/paired_devices" />
+        android:text="@string/chat_with_paired_devices" />
 
     <Button
         android:id="@+id/btMakeDiscoverable"

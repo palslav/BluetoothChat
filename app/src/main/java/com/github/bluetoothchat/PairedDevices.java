@@ -84,9 +84,11 @@ public class PairedDevices extends AppCompatActivity{
                     break;
                 case STATE_CONNECTION_FAILED:
                     tvStatus.setText("Connection Failed");
+                    break;
                 case STATE_MESSAGE_RECEIVED:
                     byte[] readBuffer = (byte[]) message.obj;
                     String msg = new String(readBuffer, 0, message.arg1);
+                    tvShowMessage.setText(msg);
                     break;
             }
             return true;
@@ -258,6 +260,7 @@ public class PairedDevices extends AppCompatActivity{
                     handler.obtainMessage(STATE_MESSAGE_RECEIVED, bytes, -1, buffer).sendToTarget();
                 } catch (IOException e){
                     e.printStackTrace();
+                    break;
                 }
             }
         }

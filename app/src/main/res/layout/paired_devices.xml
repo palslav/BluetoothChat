@@ -39,7 +39,7 @@
         android:layout_height="100dp"
         android:layout_below="@+id/btPairedListView"
         android:layout_centerHorizontal="true"
-        android:text="" />
+        android:text="@string/received_message" />
 
     <EditText
         android:id="@+id/btWriteMsg"

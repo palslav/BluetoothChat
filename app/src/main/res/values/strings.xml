@@ -9,4 +9,5 @@
     <string name="to_scan_mode">To Scan Mode</string>
     <string name="listen">Listen</string>
     <string name="chat_with_paired_devices">Chat with Paired Devices</string>
+    <string name="received_message">Received Message</string>
 </resources>

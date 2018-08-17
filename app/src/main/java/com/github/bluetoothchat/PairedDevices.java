@@ -88,7 +88,9 @@ public class PairedDevices extends AppCompatActivity{
                 case STATE_MESSAGE_RECEIVED:
                     byte[] readBuffer = (byte[]) message.obj;
                     String msg = new String(readBuffer, 0, message.arg1);
-                    tvShowMessage.setText(msg);
+                    String showmsg = (String)tvShowMessage.getText();
+                    showmsg += "\n" + msg;
+                    tvShowMessage.setText(showmsg);
                     break;
             }
             return true;

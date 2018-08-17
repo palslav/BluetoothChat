@@ -19,44 +19,59 @@
 
     <TextView
         android:id="@+id/btStatus"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btListen"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="13dp"
-        android:text="TextView" />
+        android:gravity="center_horizontal"
+        android:text="Status" />
 
     <ListView
         android:id="@+id/btPairedListView"
         android:layout_width="match_parent"
-        android:layout_height="258dp"
+        android:layout_height="200dp"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/btShowPaired" />
 
-    <TextView
-        android:id="@+id/btShowMsg"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_below="@+id/btPairedListView"
-        android:layout_centerHorizontal="true"
-        android:text="@string/received_message" />
+        android:layout_height="400dp"
+        android:layout_below="@+id/btPairedListView" >
+        <TextView
+            android:id="@+id/btShowMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btPairedListView"
+            android:layout_centerHorizontal="true"
+            android:text="@string/received_message" />
 
-    <EditText
-        android:id="@+id/btWriteMsg"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
-        android:layout_alignParentBottom="true"
-        android:layout_below="@+id/btShowMsg"
-        android:inputType="textPersonName"
-        android:text="Enter message here" />
+    </ScrollView>
 
-    <Button
-        android:id="@+id/btSendMsg"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/btWriteMsg"
-        android:text="Send" />
+    <LinearLayout
+        android:id="@+id/btChatFooter"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true">
+
+        <EditText
+            android:id="@+id/btWriteMsg"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/btShowMsg"
+            android:inputType="textPersonName"
+            android:hint="Enter message here" />
+
+        <Button
+            android:id="@+id/btSendMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/btWriteMsg"
+            android:text="Send" />
+
+    </LinearLayout>
 
 
 </RelativeLayout>
